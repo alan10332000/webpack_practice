@@ -1,6 +1,6 @@
 import _ from 'lodash'
 import './style/index.css'// 引入样式文件
-import './style/leo.scss'
+import './style/alan.scss'
 import { name } from '@/alan'
 import $ from 'jquery'
 

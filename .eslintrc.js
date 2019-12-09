@@ -17,7 +17,7 @@ module.exports = {
   },
 
   // 此项是用来配置标准的 js 风格，就是说写代码的时候要规范的写，如果你使用 vs-code 我觉得应该可以避免出错
-  extends: 'standard',
+  // extends: 'standard',
 
   globals: {
     NODE_ENV: false
