@@ -15,18 +15,28 @@ let prodConfig = {
     rules: [{
       test: /\.(sc|c|sa)ss$/,
       use: [
-        MiniCssExtractPlugin.loader, {
+        MiniCssExtractPlugin.loader,
+        {
           loader: "css-loader",
-          options: { sourceMap: true }
-        }, {
+          options: {
+            sourceMap: true
+          }
+        },
+        {
           loader: "postcss-loader",
           options: {
-            ident: "postcss", sourceMap: true,
-            plugins: loader => [require('autoprefixer')()]
+            ident: "postcss",
+            sourceMap: true,
+            plugins: loader => [
+              require('autoprefixer')()
+            ]
           }
-        }, {
+        },
+        {
           loader: "sass-loader",
-          options: { sourceMap: true }
+          options: {
+            sourceMap: true
+          }
         }
       ]
     }]
@@ -42,4 +52,5 @@ let prodConfig = {
     }),
   ],
 }
+
 module.exports = merge(common, prodConfig)
