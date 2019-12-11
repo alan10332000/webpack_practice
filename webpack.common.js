@@ -24,7 +24,8 @@ module.exports = {
       use: [{
         loader: 'babel-loader',
         options: {
-          cacheDirectory: true
+          cacheDirectory: true,
+          presets: ['@babel/preset-env']
         }
       }, {
         loader: 'eslint-loader',
